@@ -5,7 +5,11 @@ function solution(code) {
             mode = mode? 0 : 1;
             return false;
         }
-        return idx % 2 === mode;
+        if (mode === 0) {
+            return idx % 2 === 0;
+        } else if (mode === 1) {
+            return idx % 2 === 1;
+        }
     });
     return ret.join('') || 'EMPTY';
 }
